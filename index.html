@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>JakRoss</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Nunito:300,700" rel="stylesheet">
+<style>
+    
+    /*-- Page --  */ 
+    
+    /* make keyframes that tell the start state and the end state of our object */
+
+@-webkit-keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
+
+.fade-in {
+    
+    opacity:0;  /* make things invisible upon start */
+    -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+
+    -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+
+    -webkit-animation-duration:1s;
+    -moz-animation-duration:1s;
+    animation-duration:1s;
+    }
+
+.fade-in.one {
+    -webkit-animation-delay: 0.25s;
+    -moz-animation-delay: 0.25s;
+    animation-delay: 0.25s;
+}
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #CCCCCC
+}
+
+/* Navigation */
+.sidenav {
+    height: 50%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #252525;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+    
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #CCCCCC;
+    display: block;
+    transition: 0.3s;
+}
+    
+.sidenav a:hover {
+    color: #760023;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    left: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* -- BACK TO TOP -- */
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #760023;
+  color: #CCCCCC;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+#myBtn:hover {
+  background-color: #555;
+}
+
+    
+/*-- Slidedhow --*/
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #CCCCCC;
+  font-weight:100;
+}
+
+ /*-- Photo Grid --*/   
+.row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+  
+    background-color: #CCCCCC;
+}
+
+.column {
+    -ms-flex: 50%; /* IE10 */
+    flex: 50%;
+    max-width: 50%;
+    padding: 0 4px;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+}
+    
+/*-- About Me --*/
+#about{
+    width: 100%;
+    height: auto; 
+    }
+    
+#about>p{
+    margin: auto;
+    width: 75%;
+    max-width: 650px;
+    text-align: left;
+    line-height: 36px;
+    padding: 50px 0;
+    font-size: 21px;
+    }
+    
+    /* -- Work -- */
+    .project {
+        position: relative;
+        width:100%;
+    }
+    .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 99%;
+        width: 100%;
+        opacity: 0;
+        transition: .5s ease;
+        background-color: #760023;
+        margin-top: 8px;
+    }
+
+    .project:hover .overlay{
+        opacity: 1;
+    }
+    
+    .text {
+        color: white;
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        white-space: nowrap;
+    }
+    
+    
+    #about>img{
+        margin: auto;
+    }
+    
+
+#footer {
+
+   width: 100%;
+   height: 250PX;
+   background-color: #252525;
+   color: white;
+   text-align: right;
+   margin-top: 50px;
+    clear: both;
+
+}
+    
+#footer-content {
+    margin: auto;
+    padding: 15px;    
+    }
+
+#footer-text{
+    text-align: left; 
+    float:left; clear:left; 
+    max-width:350px; 
+    width:25%px;
+    }
+    
+#footer-contact{
+    text-align: left;  
+    float:left; 
+    clear:left; 
+    max-width:250px; 
+    }
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+    nav, article {
+        width: 100%;
+        height: auto;
+    }
+    
+    .sidenav {padding-top: 15px;}
+    
+    .sidenav a {font-size: 18px;}
+    
+    .column {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+    }
+    #footer{
+        height: 350px;
+    }
+    
+    #footer-text{
+        max-width: 250px;
+    }
+    #footer-contact{
+        max-width: 250px;
+        float:left;
+        clear:left;
+    }
+}
+    
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+</style>
+</head>
+<body class="fade-in one">
+    
+    <!-- Navigation -->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="Resume.html">Resumé</a>
+        <a href="#footer">Contact</a>
+        <a href="https://www.pinterest.com/JayRoss11/"><i class="fa fa-pinterest" style="font-size:36px;"></i></a>
+        <a href="https://www.instagram.com/jakross_/"><i class="fa fa-instagram" style="font-size:36px;"></i></a>
+    </div>
+    <span style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776; Jak Ross</span>
+    
+    <!-- BACK TO TOP -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+    
+    <!-- Slideshow -->
+    <div class="slideshow-container">
+
+<div class="mySlide">
+  <img src="../Images/ivana-cajina-322968-unsplash.jpg" style="width:100%">
+  <h1 class="text" style="font-size:50px">Welcome!</h1>
+</div>
+</div>
+<br>
+
+
+    <!-- Photo Grid -->
+    <div id="work"class="row"> 
+        <div class="column">
+            <div class="project"><a href="project1.html"><img src="../Images/andrea-caviglia-1063754-unsplash.jpg" style="width:100%"><div class="overlay"><div class="text">Project 1</div></div></a></div>
+            <div class="project"><a href="#"><img src="../Images/alexandru-acea-1063614-unsplash.jpg" style="width:100%"><div class="overlay"><div class="text">Project 3</div></div></a></div>
+            <div class="project"><a href="#"><img src="../Images/anders-nord-1062702-unsplash.jpg" style="width:100%"><div class="overlay"><div class="text">Project 5</div></div></a></div>
+            
+            
+        </div>
+        <div class="column">
+            <div class="project"><a href="#"><img src="../Images/jeff-kepler-1062074-unsplash.jpg" style="width:100%"><div class="overlay"><div class="text">Project 2</div></div></a></div>
+            <div class="project"><a href="#"><img src="../Images/john-moeses-bauan-1062799-unsplash.jpg" style="width:100%"><div class="overlay"><div class="text">Project 4</div></div></a></div>
+            <div class="project"><a href="#"><img src="../Images/justin-owens-1059983-unsplash.jpg" style="width:100%"><div class="overlay"><div class="text">Project 6</div></div></a></div>
+        </div>
+    </div>
+    
+    <div id="about">
+        <p><img src="../Images/thatsMe-01.png" style="width:100%; height:auto; margin:auto; padding: 50px 0; align-content:center;"><br/>
+        Hey,  my name is  Jaymee Rosser, AKA Jak Ross. I am a UI UX Designer who loves to push the limits of creativity and functionality. I love to learn about new technologies that can enhance user experiences. When I'm not creating, I enjoy playing basketball, exploring tattoos, and spending time with family.   </p>
+    </div>
+    
+    <div id="footer">
+        <div id="footer-content">
+            
+            <a href="index.html"><img src="../Images/logo.png"></a>
+            
+            <p id="footer-text">Looking for a passionate designer,  who up for any challange? Please do not hesitate to reach out to me, I'm always ready to extend a helping hand. </p>
+            
+            <p id="footer-contact">
+                jakross00@yahoo.com <br/><br/>
+                <a href="https://www.instagram.com/jakross_/" style="color:#CCCCCC;"><i class="fa fa-instagram" style="font-size:36px;"></i></a>
+                <a href="https://www.pinterest.com/JayRoss11/" style="color:#CCCCCC;"><i class="fa fa-pinterest" style="font-size:36px; padding:10px;"></i></a>
+        
+            </p>
+        </div>
+    </div>
+
+    
+<script  >
+    
+// navigation    
+    function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+// BACK TO TOP
+    
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+
+</script>
+
+
+</body>
+</html>
+
+<!--
+
+   Comments
+
+~ Colors ~
+Red: 760023
+Dark Grey: 252525
+White: CCCCCC
+Cool Grey: 333D43
+Tan: C8AF8B
+~~~~~~~~~~~~~~~~~
+
+-->
