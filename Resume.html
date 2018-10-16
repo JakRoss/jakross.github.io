@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>JakRoss</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Nunito:300,700" rel="stylesheet">
+<style>
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #CCCCCC
+}
+
+/* Navigation */
+.sidenav {
+    height: 50%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #252525;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+    
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #CCCCCC;
+    display: block;
+    transition: 0.3s;
+}
+    
+.sidenav a:hover {
+    color: #760023;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    left: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* -- BACK TO TOP -- */
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #760023;
+  color: #CCCCCC;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+#myBtn:hover {
+  background-color: #555;
+}
+    
+/*-- Resume --*/
+    
+    #resume{
+        width: 100%;
+        height:auto;
+        margin: 0 auto;
+        padding-left: 250px;
+        padding-right: 250px;
+    }
+    
+    header{
+        text-align:center;
+        font-size: 48px;
+    }
+    #XP {
+        width: 60%;
+        float: left;
+        
+    }
+    #XP>h3{
+        font-size: 24px;
+        font-weight: lighter;   
+    }
+    
+    
+    #XP>p {
+        font-size: 14px;
+		font-weight: 100;
+		line-height: 36px;
+        opacity: 0.75;
+
+    }
+
+    #skill {
+        width: auto%;
+        float: left;
+        
+    }
+    #skill>h2{
+        font-size: 24px;
+        font-weight: lighter;   
+    }
+    
+    
+    #skill>p {
+        font-size: 18px;
+        opacity: 0.75;
+
+    }
+    
+    #interests {
+        width: auto%;
+        float: left;
+        clear: left;
+        
+    }
+    #interests>h2{
+        font-size: 24px;
+        font-weight: lighter;   
+    }
+    
+    
+    #interests>p {
+        font-size: 18px;
+        opacity: 0.75;
+
+    }
+
+    #intro {
+        float: right;
+        
+    }
+    #intro>h2{
+        font-size: 24px;
+        font-weight: lighter;   
+    }
+    
+    #intro>h3{
+        font-size: 21px; 
+          
+    }
+    
+
+    
+    #intro>p {
+        font-size: 16px;
+
+    }
+    /*
+     #skill{   
+    }
+    
+     #interest{
+    }
+    */
+#footer {
+
+   width: 100%;
+   height: 250PX;
+   background-color: #252525;
+   color: white;
+   text-align: right;
+   margin-top:50px;
+   clear:both;
+}
+    
+#footer-content {
+    margin: auto;
+    padding: 15px;    
+    }
+
+#footer-text{
+    text-align: left; 
+    float:left; clear:left; 
+    max-width:350px; 
+    width:25%px;
+    }
+  #footer-contact{
+        text-align: left; 
+        float:left; 
+        clear:left; 
+        max-width:250px; 
+    }
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 800px) {
+    
+    /* --- Resume Page --- */
+    
+    #resume{
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        padding-left:0px;
+        padding-right:0px;
+    }
+    #XP{
+        width:100%;
+    }
+    
+    #XP>h3{
+        font-size: 18px; 
+        border-top: 1px dashed lightgray;  
+    }
+    
+    #XP>p {
+        font-size: 16px;
+        
+    }
+
+
+    #intro {
+        display:none;
+        
+        
+    }
+    #intro>h2{
+        font-size: 14px;  
+    }
+    
+    #intro>p {
+        font-size: 16px;
+
+    }
+
+    /* --- End Resume page --- */
+        
+    }   
+    
+@media (max-width: 600px) {
+    nav, article {
+        width: 100%;
+        height: auto;
+    }
+    
+    .sidenav {padding-top: 15px;}
+    
+    .sidenav a {font-size: 18px;}
+    
+    .column {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+    }
+    
+    /* --- Resume Page --- */
+    
+    #resume{
+        width: 100%;
+        margin: 0 auto;
+        padding-left:0px;
+        padding-right:0px;
+    }
+    #XP{
+        width:100%;
+    }
+    
+    #XP>h3{
+        font-size: 18px; 
+        border-top: 1px dashed lightgray;  
+    }
+    
+    #XP>p {
+        font-size: 16px;
+        
+    }
+
+
+    #intro {
+        display:none;
+        
+        
+    }
+    #intro>h2{
+        font-size: 14px;  
+    }
+    
+    #intro>p {
+        font-size: 16px;
+
+    }
+
+    /* --- End Resume page --- */
+    
+    #footer{
+        height: 350px;
+    }
+    
+    #footer-content {
+    margin: auto;
+    padding: 15px;    
+    }
+    
+    #footer-text{
+        max-width: 250px;
+    }
+    
+    #footer-contact{
+        text-align: left; 
+        float:left; 
+        clear:left; 
+        max-width:250px; 
+    }
+    
+}
+    
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+</style>
+</head>
+<body>
+    
+    <!-- Navigation -->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a href="index.html#work">Work</a>
+        <a href="index.html#about">About</a>
+        <a href="Resume.html">Resumé</a>
+        <a href="#footer">Contact</a>
+        <a href="#"><i class="fa fa-instagram" style="font-size:36px;"></i></a>
+        <a href="#"><i class="fa fa-pinterest" style="font-size:36px;"></i></a>
+    </div>
+    <span style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776; Jak Ross</span>
+    
+    <!-- BACK TO TOP -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+    
+    <!-- Main Content -->
+<div id="resume">
+    
+    <header><p style="color:#760023;">My Resumé</p></header>
+    
+    <div id="intro">                                
+        <h2>Jaymee Rosser</h2>
+        <p style="color:#760023; font-weight:bold;">“Striving to lead the way for <br/>creative problem solving.”</p>
+        <p style="color:grey;">New Media Deisgn <br/> Management <br/>Communications
+        <p>School Email: <br/><strong>jlr9623@g.rit.edu</strong></p>
+        <p>Personal Email: <br/><strong>jakross00@yahoo.com</strong></p>
+                            
+                           
+        <div id="skill">
+                                    
+            <h2>Skills</h2>
+            <p>UI Design</p>
+            <p>User Experience Design</p>
+            <p>Branding</p>
+            <p>Illustration</p>
+            <p>Communication</p>
+            <p>Leadership</p>   
+            ____
+                                
+        </div>
+        
+        <div id="interests">
+                                    
+            <h2>Interests</h2>
+            <p>Creating</p>
+            <p>Exploring</p>
+            <p>Discovering</p>
+            <p>Basketball</p>  
+            ____
+            <br/>                    
+            <a href="../Images/UpdatedResume%20copy.pdf" style="color:#A61931; text-decoration:none; font-size:14px;">Download Resume</a>
+            
+            
+                                
+        </div>
+    </div>
+                    
+                    
+                            
+    <div id="XP" >
+        <p style="font-size:21px;">Experience</p>
+        <h3><strong style="font-size:36px; color:#760023;">UI UX Designer</strong><br/> <span style="font-size:24px;;">Rochester Regional Health</span><br/><span style="color:grey; font-size: 18px;"> Summer - Fall 2018</span></h3>
+                                
+        <p style="font-size:18px;">Major responsibilities included designing user interfaces and defining user experiences for web and mobile applications. In addition to communicating with stakeholders, users and team members to create a success product.</p>
+        ____
+                         
+        <h3><strong style="font-size:36px; color:#760023;">Graphic Designer</strong><br/> <span style="font-size:24px;">Freelance</span><br/><span style="color:grey; font-size: 18px;">2014 - Present</span></h3>
+                                
+        <p style="font-size:18px;">Required to create prints, graphics, logos, and T-shirt designs for various events hosted on campus. Worked with members of a team to develop themes, set deadlines, and deliver a final product.</p>
+        ____
+        <h3><strong style="font-size:36px; color:#760023;">Intramural Manager</strong><br/> <span style="font-size:24px;;">Rochester Institute of Technology</span><br/><span style="color:grey; font-size: 18px;">2018 - Present</span></h3>
+        
+        <p style="font-size:18px;">Assisted in the training of supervisor and new referees. Instructed new referees on intramural rules and daily process of the work . Maintaining a controlled athletic event, and assuring the safety and well-being of all players, referees and attendants.</p>
+        ____   
+        <p style="font-size:21px;">Leadership</p>
+        <h3><strong style="font-size:36px; color:#760023;">Team Captain</strong><br/><span style="color:grey; font-size: 18px;">RIT Men's Basketball</span></h3>
+        
+        <p style="font-size:18px;">Motivate and lead the team to work hard on and off the court. Inspire to win.Attend leadership events provide by RIT athletics to develop knowledge ofbeing an effective leader on and off the court. Increase moral and develop teammates into better player and better people.</p>
+        ____
+        <h3><strong style="font-size:36px; color:#760023;">Vice President of Health and Safety</strong><br/><span style="color:grey; font-size: 18px;">Theta Chi Iota Psi Fraternity</span></h3>
+        
+        <p style="font-size:18px;">Protect and preserve the overall well-being of the entire chapter, physically, mentally, emotionally , and spiritually. Organize educational and informative events on campus to raise awareness of various social topics. Worked with other officers to organize and maintain fraternal affairs.</p>
+    </div>
+        
+    </div>
+
+    <!-- Footer -->
+    <div id="footer">
+        <div id="footer-content">
+            
+            <a href="index.html"><img src="../Images/logo.png"></a>
+            
+            <p id="footer-text">Looking for a passionate designer who's up for any challange? Please do not hesitate to reach out to me, I'm always ready to extend a helping hand. </p>
+            
+            <p id="footer-contact">
+                jakross00@yahoo.com <br/><br/>
+                <i class="fa fa-instagram" style="font-size:36px;"></i>
+                <i class="fa fa-pinterest" style="font-size:36px; padding:10px;"></i>
+        
+            </p>
+        </div>
+    </div>
+
+    
+<script  >
+    
+// navigation    
+    function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+// BACK TO TOP
+    
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+
+</script>
+
+
+</body>
+</html>
+
+<!--
+
+   Comments
+
+~ Colors ~
+Red: 760023
+Dark Grey: 252525
+White: CCCCCC
+Cool Grey: 333D43
+Tan: C8AF8B
+~~~~~~~~~~~~~~~~~
+
+-->
