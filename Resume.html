@@ -7,13 +7,9 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href="https://fonts.googleapis.com/css?family=Nunito:300,700" rel="stylesheet">
 <style>
-* {
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-    font-family: 'Nunito', sans-serif;
-}
 
-body {
+
+* {
     box-sizing: border-box;
     scroll-behavior: smooth;
     font-family: 'Cinzel', serif;
@@ -23,6 +19,23 @@ body {
     font-family: 'Quattrocento Sans', sans-serif;
 }
 
+body {
+    background-color: #000000;
+    Background-image: url("Images/1x/Asset%2017.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: contain;
+    -webkit-background-color: #000000;
+    -webkit-Background-image: url("Images/1x/Asset%2017.png");
+    -webkit-background-repeat: no-repeat;
+    -webkit-background-attachment: fixed;
+    -webkit-background-size: contain;
+    -moz-background-color: #000000;
+    -moz-Background-image: url("Images/1x/Asset%2017.png");
+    -moz-background-repeat: no-repeat;
+    -moz-background-attachment: fixed;
+    -moz-background-size: contain;
+}
 
 /* Navigation */
 .sidenav {
@@ -32,23 +45,27 @@ body {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #252525;
+    background-color: #C8AF8B;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
+    border-radius: 5px;
+
 }
     
 .sidenav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: #CCCCCC;
+    color: #252525;
     display: block;
-    transition: 0.3s;
+    transition-duration: 0.3s;
 }
     
 .sidenav a:hover {
     color: #760023;
+    text-decoration: underline;
+    transition: .25s ease;
 }
 
 .sidenav .closebtn {
@@ -69,14 +86,14 @@ body {
   font-size: 18px;
   border: none;
   outline: none;
-  background-color: #760023;
-  color: #CCCCCC;
+  background-color: #C8AF8B;
+  color: #000000;
   cursor: pointer;
   padding: 15px;
-  border-radius: 4px;
+  border-radius: 5px;
 }
 #myBtn:hover {
-  background-color: #555;
+  background-color: #760023;
 }
     
 /*-- Resume --*/
