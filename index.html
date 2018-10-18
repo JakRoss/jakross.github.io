@@ -17,7 +17,7 @@
 @-moz-keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
 @keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
 
-.fade-in {
+.fade-in, body {
     
     opacity:0;  /* make things invisible upon start */
     -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
@@ -33,7 +33,7 @@
     animation-duration:1s;
     }
 
-.fade-in.one {
+.fade-in.one, body{
     -webkit-animation-delay: 0.25s;
     -moz-animation-delay: 0.25s;
     animation-delay: 0.25s;
@@ -41,7 +41,7 @@
 
 * {
     box-sizing: border-box;
-    scroll-behavior: smooth;
+    scroll-behavior: auto smooth;
     font-family: 'Cinzel', serif;
 }
     
@@ -56,6 +56,16 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: contain;
+    -webkit-background-color: #000000;
+    -webkit-Background-image: url("Images/1x/Asset%2017.png");
+    -webkit-background-repeat: no-repeat;
+    -webkit-background-attachment: fixed;
+    -webkit-background-size: contain;
+    -moz-background-color: #000000;
+    -moz-Background-image: url("Images/1x/Asset%2017.png");
+    -moz-background-repeat: no-repeat;
+    -moz-background-attachment: fixed;
+    -moz-background-size: contain;
 }
 
 /* Navigation */
