@@ -8,6 +8,35 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
 <style>
+    @-webkit-keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
+    
+@-webkit-keyframes body { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
+@-moz-keyframes body { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
+@keyframes body { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
+
+.fade-in, body {
+    
+    opacity:0;  /* make things invisible upon start */
+    -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+
+    -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+
+    -webkit-animation-duration:1s;
+    -moz-animation-duration:1s;
+    animation-duration:1s;
+    }
+
+.fade-in.one, body{
+    -webkit-animation-delay: 0.25s;
+    -moz-animation-delay: 0.25s;
+    animation-delay: 0.25s;
+}
 
 
 * {
@@ -203,7 +232,7 @@ body {
     clear:left; 
     max-width:720px; 
     width:100%;
-    font-size:18px;
+    font-size:14px;
     }
     
 #footer-contact{
@@ -211,7 +240,18 @@ body {
     float:left; 
     clear:left; 
     max-width:250px; 
-    font-size:18px;
+    font-size:14px;
+    }
+    
+        #footer-text>a{
+        text-decoration: none;
+        color: #C8AF8B;
+        padding-right: 25px;
+        transition: .5s;
+    }
+    
+    #footer-text>a:hover{
+        color: #760023;
     }
 /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
 @media (max-width: 800px) {
@@ -340,7 +380,7 @@ body {
 }
 </style>
 </head>
-<body>
+<body class="fade-in one">
     
     <!-- Navigation -->
     <div id="mySidenav" class="sidenav">
@@ -436,6 +476,13 @@ body {
     <!-- Footer -->
     <div id="footer" style="padding-top:50px; border-top: 0.5px solid #C8AF8B;">
         <div id="footer-content">
+            
+             <p id="footer-text">
+                <a href="index.html#work">Work</a> 
+                <a href="index.hyml#about">About</a> 
+                <a href="Resume.html">Resumé </a> 
+                <a href="#footer">Contact </a>
+            </p>
             
             <p id="footer-text">Looking for a passionate designer,  who's up for any challange? Do not hesitate to reach out to me, I'm always ready to extend a helping hand. </p>
             

@@ -16,7 +16,7 @@
 @-moz-keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
 @keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
 
-.fade-in {
+.fade-in, body {
     
     opacity:0;  /* make things invisible upon start */
     -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
@@ -32,7 +32,7 @@
     animation-duration:1s;
     }
 
-.fade-in.one {
+.fade-in.one, body {
     -webkit-animation-delay: 0.25s;
     -moz-animation-delay: 0.25s;
     animation-delay: 0.25s;
@@ -227,6 +227,39 @@ body {
 
 }
     
+#footer-content {
+    margin: auto;
+    padding: 15px;    
+    }
+
+#footer-text{
+    text-align:left; 
+    float:left; 
+    clear:left; 
+    max-width:720px; 
+    width:100%;
+    font-size:14px;
+    }
+    
+        #footer-text>a{
+        text-decoration: none;
+        color: #C8AF8B;
+        padding-right: 25px;
+        transition: .5s;
+    }
+    
+    #footer-text>a:hover{
+        color: #760023;
+    }
+    
+    #footer-contact{
+    text-align: left;  
+    float:left; 
+    clear:left; 
+    max-width:250px; 
+    font-size:14px;
+    }
+
     /*-- Project Page --*/
     
     #media {
@@ -250,39 +283,6 @@ body {
         font-size: 36px;
     }
 
-    
-#footer {
-
-   width: 100%;
-   height: 250PX;
-   color: #C8AF8B;
-   text-align: right;
-   margin-top: 50px;
-    clear: both;
-
-}
-    
-#footer-content {
-    margin: auto;
-    padding: 15px;    
-    }
-
-#footer-text{
-    text-align:left; 
-    float:left; 
-    clear:left; 
-    max-width:720px; 
-    width:100%;
-    font-size:14px;
-    }
-    
-#footer-contact{
-    text-align: left;  
-    float:left; 
-    clear:left; 
-    max-width:250px; 
-    font-size:14px;
-    }
 /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
 @media (max-width: 600px) {
     nav, article {
@@ -353,8 +353,8 @@ body {
     <!-- Navigation -->
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="#work">Work</a>
-        <a href="#about">About</a>
+        <a href="index.html#work">Work</a>
+        <a href="index#about">About</a>
         <a href="Resume.html">Resumé</a>
         <a href="#footer">Contact</a>
     </div>
@@ -368,7 +368,7 @@ body {
     <div class="slideshow-container">
 
 <div class="mySlide">
-  <img src="../Images/andrew-neel-308138-unsplash.jpg" style="width:100%">
+  <img src="Images/andrew-neel-308138-unsplash.jpg" style="width:100%">
   <h1 class="text" style="font-size:50px">Project 1 - Header Image</h1>
 </div>
 </div>
@@ -416,6 +416,13 @@ body {
     
     <div id="footer">
         <div id="footer-content">
+            
+             <p id="footer-text">
+                <a href="index.html#work">Work</a> 
+                <a href="index.hyml#about">About</a> 
+                <a href="Resume.html">Resumé </a> 
+                <a href="#footer">Contact </a>
+            </p>
             
             <p id="footer-text">Looking for a passionate designer,  who's up for any challange? Do not hesitate to reach out to me, I'm always ready to extend a helping hand. </p>
             

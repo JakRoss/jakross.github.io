@@ -143,6 +143,101 @@ body {
     width:100%; 
     height:1080px;
 }
+    
+#scroll-down{
+    bottom:115px;
+    position: relative;
+    }
+    
+section {
+  bottom: 0;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+section::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 80%;
+}
+section h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font : normal 300 64px/1 'Josefin Sans', sans-serif;
+  text-align: center;
+  white-space: nowrap;
+}
+
+    
+#section04 a {
+  padding-top: 60px;
+}
+#section04 a span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  border-left: 1px solid #C8AF8B;
+  border-bottom: 1px solid #C8AF8B;
+  border-radius: 5px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-animation: sdb04 2s infinite;
+  animation: sdb04 2s infinite;
+  box-sizing: border-box;
+}
+@-webkit-keyframes sdb04 {
+  0% {
+    -webkit-transform: rotate(-45deg) translate(0, 0);
+  }
+  20% {
+    -webkit-transform: rotate(-45deg) translate(-10px, 10px);
+  }
+  40% {
+    -webkit-transform: rotate(-45deg) translate(0, 0);
+  }
+}
+@keyframes sdb04 {
+  0% {
+    transform: rotate(-45deg) translate(0, 0);
+  }
+  20% {
+    transform: rotate(-45deg) translate(-10px, 10px);
+  }
+  40% {
+    transform: rotate(-45deg) translate(0, 0);
+  }
+}
+    
+    .demo a {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  z-index: 2;
+  display: inline-block;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  color: #C8AF8B;
+  font : normal 400 20px/1 'Cinzel', serif;
+  letter-spacing: .1em;
+  text-decoration: none;
+  transition: opacity .3s;
+}
+.demo a:hover {
+  opacity: .5;
+}
+
+
 
 /* Caption text */
 .text {
@@ -208,11 +303,9 @@ body {
         width: 100%;
         opacity: 0;
         transition: .5s ease;
+        border:1px solid #C8AF8B;
         background-color: #000000;
-        background-image: url("Images/1x/Asset%2017.png");
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: contain;
+        border-radius: 5px;
         margin-top: 8px;
         color: #C8AF8B;
     }
@@ -264,6 +357,17 @@ body {
     font-size:14px;
     }
     
+    #footer-text>a{
+        text-decoration: none;
+        color: #C8AF8B;
+        padding-right: 25px;
+        transition: .5s;
+    }
+    
+    #footer-text>a:hover{
+        color: #760023;
+    }
+    
 #footer-contact{
     text-align: left;  
     float:left; 
@@ -298,9 +402,13 @@ body {
     
     .mySlide {
     width:100%; 
-    height:175px;
+    height:1920px;
         
 }
+    
+    #scroll-down{
+        display:none;
+    }
     
     #about>p {
         font-size:14px;
@@ -309,10 +417,13 @@ body {
         height: 350px;
     }
     
+    
     #footer-text{
         max-width: 250px;
         font-size: 12px;
     }
+
+    
     #footer-contact{
         max-width: 250px;
         float:left;
@@ -322,12 +433,12 @@ body {
 }
     
 @media only screen and (max-width: 480px) {
+    
+    body{
+        background-position: center;
+    }
   .text {font-size: 11px}
     
-    .mySlide {
-    width:100%; 
-    height:175px;
-    }
     
     #about>p{
         font-size:12px;
@@ -340,6 +451,9 @@ body {
     #footer-contact{
         font-size:12px;
     }
+ }
+    
+    
 }
 </style>
 </head>
@@ -362,32 +476,40 @@ body {
     
     <!-- Slideshow -->
     <div class="slideshow-container">
-
+      
 <div class="mySlide">
   
 </div>
+<div id="scroll-down">
+        <section id="section04" class="demo">
+            <h1></h1>
+            <a href="#work"><span></span><span></span><span></span>Explore</a>
+        </section>
+      </div>
 </div>
+    
+    
 <br>
 
 
     <!-- Photo Grid -->
     <div id="work"class="row"> 
         <div class="column">
-            <div class="project"><a href="project1.html"><img src="../Images/andrea-caviglia-1063754-unsplash.jpg" style="width:100%"><div class="overlay"><div class="text">Project 1</div></div></a></div>
-            <div class="project"><a href="#"><img src="../Images/alexandru-acea-1063614-unsplash.jpg" style="width:100%"><div class="overlay"><div class="text">Project 3</div></div></a></div>
-            <div class="project"><a href="#"><img src="../Images/anders-nord-1062702-unsplash.jpg" style="width:100%"><div class="overlay"><div class="text">Project 5</div></div></a></div>
+            <div class="project"><a href="project1.html"><img src="Images/andrea-caviglia-1063754-unsplash.jpg" style="width:100%"><div class="overlay"><div class="text">Project 1</div></div></a></div>
+            <div class="project"><a href="#"><img src="Images/alexandru-acea-1063614-unsplash.jpg" style="width:100%"><div class="overlay"><div class="text">Project 3</div></div></a></div>
+            <div class="project"><a href="#"><img src="Images/anders-nord-1062702-unsplash.jpg" style="width:100%"><div class="overlay"><div class="text">Project 5</div></div></a></div>
             
             
         </div>
         <div class="column">
-            <div class="project"><a href="#"><img src="../Images/jeff-kepler-1062074-unsplash.jpg" style="width:100%"><div class="overlay"><div class="text">Project 2</div></div></a></div>
-            <div class="project"><a href="#"><img src="../Images/john-moeses-bauan-1062799-unsplash.jpg" style="width:100%"><div class="overlay"><div class="text">Project 4</div></div></a></div>
-            <div class="project"><a href="#"><img src="../Images/justin-owens-1059983-unsplash.jpg" style="width:100%"><div class="overlay"><div class="text">Project 6</div></div></a></div>
+            <div class="project"><a href="#"><img src="Images/jeff-kepler-1062074-unsplash.jpg" style="width:100%"><div class="overlay"><div class="text">Project 2</div></div></a></div>
+            <div class="project"><a href="#"><img src="Images/john-moeses-bauan-1062799-unsplash.jpg" style="width:100%"><div class="overlay"><div class="text">Project 4</div></div></a></div>
+            <div class="project"><a href="#"><img src="Images/justin-owens-1059983-unsplash.jpg" style="width:100%"><div class="overlay"><div class="text">Project 6</div></div></a></div>
         </div>
     </div>
     
     <div id="about">
-        <p><img src="../Images/thatsMe-01.png" style="width:100%; height:auto; margin:auto; padding: 50px 0; align-content:center;"><br/>
+        <p><img src="Images/thatsMe-01.png" style="width:100%; height:auto; margin:auto; padding: 50px 0; align-content:center;"><br/>
         Hey,  my name is  Jaymee Rosser, AKA Jak Ross. I am a UI UX Designer who loves to exlpore the relationship between creativity and functionality and I love to learn about new technologies that can enhance our experiences. In my free time I like to play basketball, design tattoos, and  play video games. Feel free to contact me with any inquires. 
         
         </p>
@@ -395,6 +517,13 @@ body {
     
     <div id="footer">
         <div id="footer-content">
+            
+            <p id="footer-text">
+                <a href="#work">Work</a> 
+                <a href="#about">About</a> 
+                <a href="Resume.html">Resumé </a> 
+                <a href="#footer">Contact </a>
+            </p>
             
             <p id="footer-text">Looking for a passionate designer,  who's up for any challange? Do not hesitate to reach out to me, I'm always ready to extend a helping hand. </p>
             
@@ -437,6 +566,15 @@ function topFunction() {
     document.documentElement.scrollTop = 0;
 }
 
+    
+// scroll down -- 
+    
+    $(function() {
+  $('a[href*=#]').on('click', function(e) {
+    e.preventDefault();
+    $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
+  });
+});
 </script>
 
 
