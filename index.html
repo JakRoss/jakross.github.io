@@ -141,12 +141,13 @@ body {
     
 .mySlide {
     width:100%; 
-    height:1080px;
+    height:960px;
 }
     
 #scroll-down{
-    bottom:115px;
-    position: relative;
+    bottom:10%;
+    position: absolute;
+    left: 47.5%;
     }
     
 section {
@@ -378,11 +379,87 @@ section h1 {
 
 /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
     
+     @media (max-height: 1380px) {
+        
+    .mySlide{
+         height: 1440px;
+       
+        }
+        
+    #scroll-down{
+        bottom:15%;
+         left: 45%;
+        }
+        
+        body{
+            background-position: center;
+        }
+    }
+    
+    
+    @media (max-height: 1080px) {
+        
+    .mySlide{
+         height: 1080px;
+       
+        }
+        
+    #scroll-down{
+        bottom:25%;
+         left: 45%;
+        }
+        
+        body{
+            background-position: center;
+        }
+    }
+    
+    @media (max-height: 850px) {
+        
+    .mySlide{
+         height: 960px;
+       
+        }
+        
+    #scroll-down{
+        bottom:35%;
+         left: 37.5%;
+        }
+    }
+    
+    @media (max-height: 750px) {
+        
+    .mySlide{
+         height: 960px;
+       
+        }
+        
+    #scroll-down{
+        bottom:35%;
+         left: 37.5%;
+        }
+    }
+    
+    @media (max-height: 650px) {
+        
+    .mySlide{
+         height: 960px;
+       
+        }
+        
+    #scroll-down{
+        bottom:45%;
+         left: 35.5%;
+        }
+    }
+    
+    
+    
     @media (max-width: 800px) {
-        .mySlide {
-    width:100%; 
-    height:480px;
-}
+        
+    body{
+         background-size: center;
+        }
     }
 @media (max-width: 600px) {
     nav, article {
@@ -398,16 +475,6 @@ section h1 {
         -ms-flex: 100%;
         flex: 100%;
         max-width: 100%;
-    }
-    
-    .mySlide {
-    width:100%; 
-    height:1920px;
-        
-}
-    
-    #scroll-down{
-        display:none;
     }
     
     #about>p {
