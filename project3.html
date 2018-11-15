@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>JakRoss</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Nunito:300,700" rel="stylesheet">
+<style>
+    
+    /*-- Page --  */ 
+    
+    /* make keyframes that tell the start state and the end state of our object */
+
+@-webkit-keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
+
+.fade-in, body {
+    
+    opacity:0;  /* make things invisible upon start */
+    -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+
+    -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+
+    -webkit-animation-duration:1s;
+    -moz-animation-duration:1s;
+    animation-duration:1s;
+    }
+
+.fade-in.one, body {
+    -webkit-animation-delay: 0.25s;
+    -moz-animation-delay: 0.25s;
+    animation-delay: 0.25s;
+}
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Cinzel', serif;
+}
+
+body {
+    background-color: #f3f3f3;
+   
+}
+
+/* Navigation */
+.sidenav {
+    height: 50%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid #0c0d0d;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    border-radius: 5px;
+}
+    
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    font-size: 25px;
+    text-decoration:none;
+    color: #0c0d0d;
+    display: block;
+}
+    
+.sidenav a:hover {
+    color: #760023;
+    transition: .25s ease;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    left: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* -- BACK TO TOP -- */
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border:1px solid #0c0d0d;
+  outline: none;
+  background-color: #F3F3F3;
+  color: #0c0d0d;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 5px;
+}
+#myBtn:hover {
+  background-color: #760023;
+}
+    
+/*-- Slidedhow --*/
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #CCCCCC;
+  font-weight:100;
+}
+
+ /*-- Photo Grid --*/   
+.row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+  
+    background-color: #CCCCCC;
+}
+
+.column {
+    -ms-flex: 50%; /* IE10 */
+    flex: 50%;
+    max-width: 50%;
+    padding: 0 4px;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+}
+    
+/*-- About Me --*/
+#about{
+    width: 100%;
+    height: auto; 
+    }
+    
+#about>p{
+    margin: auto;
+    width: 75%;
+    max-width: 650px;
+    text-align: left;
+    line-height: 36px;
+    padding: 50px 0;
+    font-size: 21px;
+    }
+    
+    /* -- Work -- */
+    .project {
+        position: relative;
+        width:100%;
+    }
+    .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 99%;
+        width: 100%;
+        opacity: 0;
+        transition: .5s ease;
+        background-color: #760023;
+        margin-top: 8px;
+    }
+
+    .project:hover .overlay{
+        opacity: 1;
+    }
+    
+    .text {
+        color: white;
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        white-space: nowrap;
+    }
+    
+    
+    #about>img{
+        margin: auto;
+    }
+    
+
+#footer {
+
+   width: 100%;
+   height: 250PX;
+   color: #0c0d0d;
+   text-align: right;
+   margin-top: 50px;
+    clear: both;
+
+}
+    
+#footer-content {
+    margin: auto;
+    padding: 15px;    
+    }
+
+#footer-text{
+    text-align:left; 
+    float:left; 
+    clear:left; 
+    max-width:720px; 
+    width:100%;
+    font-size:14px;
+    }
+    
+        #footer-text>a{
+        text-decoration: none;
+        color: #0c0d0d;
+        padding-right: 25px;
+        transition: .5s;
+    }
+    
+    #footer-text>a:hover{
+        color: #760023;
+    }
+    
+    #footer-contact{
+    text-align: left;  
+    float:left; 
+    clear:left; 
+    max-width:250px; 
+    font-size:14px;
+    }
+
+    /*-- Project Page --*/
+    
+    #media {
+        width: 50%;
+        height: auto;
+        margin: 0 auto;
+        padding: 10px; 
+
+        color:#0c0d0d;
+        
+
+    }
+
+    #media>p {
+        font-size: 24px;
+        width: 75%;
+        line-height: 35px;
+        
+    }
+    #media>h1 {
+        width: 45%;
+        font-size: 36px;
+    }
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+    nav, article {
+        width: 100%;
+        height: auto;
+    }
+    
+    .sidenav {padding-top: 15px;}
+    
+    .sidenav a {font-size: 18px;}
+    
+    .column {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+    }
+    #footer{
+        height: 350px;
+    }
+    
+    #footer-text{
+        max-width: 250px;
+    }
+    #footer-contact{
+        max-width: 250px;
+        float:left;
+        clear:left;
+    }
+    
+    #media {
+        width:100%;
+        margin: 0 auto;
+        margin-top: 25%;
+        align-content: center;
+        
+
+    }
+
+    #media>p {
+        font-size: 24px;
+        font-weight: bold;
+        text-align: left;
+        width: 100%;
+        margin:0 auto;
+        
+    }
+    #media>h1 {
+        width: 100%;
+        font-size: 28px;
+        font-weight: lighter;
+        text-align: left;
+        margin:0 auto;
+        padding-bottom: 25px;
+        line-height: 36px;
+        
+    }
+    #media>figure {
+        margin: 0 auto;
+    }
+}
+    
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+</style>
+</head>
+<body class="fade-in one">
+    
+    <!-- Navigation -->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html#work">Work</a>
+        <a href="index#about">About</a>
+        <a href="Resume.html">Resumé</a>
+        <a href="#footer">Contact</a>
+    </div>
+    <span style="font-size:30px;cursor:pointer; color:#0c0d0d;" onclick="openNav()">&#9776;</span>
+    
+    <!-- BACK TO TOP -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+    
+    <!-- Slideshow -->
+    <div class="slideshow-container">
+
+<div class="mySlide">
+  <img src="Projects/Companion/Asset45@3x.png" style="width:100%;">
+  <h1 class="text" style="font-size:50px"></h1>
+</div>
+</div>
+<br>
+    
+    <div id="project-content">
+       <div id="media">
+                    
+                        
+                        <p style="width:95%; text-align:left; clear:both; padding-top:30px;"><strong style="font-size:21px; color:#1e77bc;">Story</strong><br/><br/>  <span style="font-size: 21px; font-family:'Neuton', serif; font-weight:lighter; line-height:35px;"> On a daily basis, hospitals meet to discuss the health and safety of the different departments within the hospital. The Daily Safety Check is a meeting where all this takes place. Each department will report using certain termonology that allows for the meeting a progress quickly through the meeting and hear from every department. A scribe it then used to record all the information that is presented at the meeting by hand.  <br/><br/> 
+                            
+                        The Companion App is a tool to assist in the engagement of attendees and help the scribes collect information. Users will be prompted to enter their reports before the meeting, giving the scribe more time to validate their reports. The focus of this application is to assist meeting process and create a more effecient meeting.  <br/><br/>
+                            
+                        </span></p><br/> <br/>
+           
+                        <p style="width:100%; text-align:left; clear:both; padding-top:30px;"><strong style="font-size:21px; color:#1e77bc;">Challenges</strong><br/><br/>  <span style="font-size: 21px; font-family:'Neuton', serif; font-weight:lighter; line-height:35px;">~ Creating an experience that prompts the user to be an active attendee. <br/>
+                            ~ Allow users to interact with live information. <br/>
+                            ~ Instruct the user on how to report. <br/>
+                            ~ Provide easy instruction for new attendees.<br/>
+                            </span></p><br/>
+        </div>              
+        
+       
+                        
+                        <img src="Projects/Companion/3x/Asset%2046@3x.png" width="100%;" height="auto" style=" padding-bottom:15px;">
+        
+            
+              <div id="media">    
+                  <h1 style="font-size:24px; color:#1e77bc;"> Solutions</h1>
+                       
+                    <span style="font-size: 21px;  font-family:'Neuton', serif; font-weight:lighter; text-align: center; line-height:35px;">                        
+                        A feed that flows smoothly into videos. Swiping left or right slide the current clip away and reveal the clip underneath. The goal for this interaction is to get the user to endlessly  swipe for content.</span><br/>
+                            <figure style=" position:relative; margin:0 auto; width:100%;"> 
+                                <img src="Projects/Companion/3x/Asset%2048@3x.png" width="100%;" height="auto" style="  padding:5px;"> </figure><br/><br/><br/>
+                            
+                            <span style="font-size: 21px;  font-family:'Neuton', serif; font-weight:lighter; line-height:35px;">    
+                                Fans can save clips and share them to other plateforms. This creates a personal feel for each user and also gives them an outlet to share their saved clips with friends. It also serves as a good marketing strategy to expand the visability of the app for new users to join. </span><br/>
+                            <figure style=" position:relative; margin:0 auto;"><img src="Projects/Companion/3x/Asset%2052@3x.png" width="100%" height="auto" ><img src="Projects/Companion/3x/Asset%2057@3x.png" width="100%" height="auto">
+                            </figure><br/>
+                            
+                        
+        </div> 
+        
+                        
+        <div id="media">
+                        
+                        
+                        <p style="width:95%; text-align:left; clear:both; padding-top:40px;"><strong style="font-size:24px; color:#1e77bc;"> Goals</strong><br/><br/>  <span style="font-size: 21px; font-family:'Neuton', serif; font-weight:lighter;"> The Reel provides it's users with an endless stream of personalized content. Our goal was to create an application the allows users to stay up-to-date with all their favorite teams. The functionality of the application allows for easy navigation, cross-plateform sharing, and an engaging UI that users will enjoy everytime they open the app.  </span></p><br/>                     
+        </div>
+         <img src="Projects/Companion/3x/Asset%2047@3x.png" width="100%;" height="auto" style=" padding-bottom:15px;">
+        
+        <p style="font-size:18px;"><a href="project2.html"style="color:#0c0d0d; float:left; clear:left; text-decoration:none;">Previous Project</a>     
+                <a href="project4.html" style="color:#0c0d0d; float:right; text-decoration:none;">Next Project</a></p>
+    
+    </div>
+
+    
+    <div id="footer">
+        <div id="footer-content">
+            
+             <p id="footer-text">
+                <a href="index.html#work">Work</a> 
+                <a href="index.hyml#about">About</a> 
+                <a href="Resume.html">Resumé </a> 
+                <a href="#footer">Contact </a>
+            </p>
+            
+            <p id="footer-text">Looking for a passionate designer,  who's up for any challange? Do not hesitate to reach out to me, I'm always ready to extend a helping hand. </p>
+            
+            <p id="footer-contact">
+                jakross00@yahoo.com <br/><br/>
+                <a href="https://www.instagram.com/jakross_/" style="color:#0c0d0d;"><i class="fa fa-instagram" style="font-size:18px;"></i></a>
+                <a href="https://www.pinterest.com/JayRoss11/" style="color:#0c0d0d;"><i class="fa fa-pinterest" style="font-size:18px; padding:10px;"></i></a>
+        
+            </p>
+        </div>
+    </div>
+
+    
+<script  >
+    
+// navigation    
+    function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+// BACK TO TOP
+    
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+
+</script>
+
+
+</body>
+</html>
+
+<!--
+
+   Comments
+
+~ Colors ~
+Red: 760023
+Dark Grey: 252525
+White: CCCCCC
+Cool Grey: 333D43
+Tan: C8AF8B
+~~~~~~~~~~~~~~~~~
+
+-->

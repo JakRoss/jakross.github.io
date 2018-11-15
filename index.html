@@ -117,16 +117,19 @@ body {
   right: 30px;
   z-index: 99;
   font-size: 18px;
-  border:1px solid #C8AF8B;
+  border-right: 1px solid #C8AF8B;
+  border-top: 1px solid #C8AF8B;
   outline: none;
-  background-color: #000000;
+  background-color:transparent;
   color: #C8AF8B;
   cursor: pointer;
   padding: 15px;
   border-radius: 5px;
+    -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 #myBtn:hover {
-  background-color: #760023;
+  opacity: 0.5;
 }
 
     
@@ -145,9 +148,8 @@ body {
 }
     
 #scroll-down{
-    bottom:10%;
+    bottom:15%;
     position: absolute;
-    left: 47.5%;
     }
     
 section {
@@ -538,7 +540,7 @@ section h1 {
     <span style="font-size:30px;cursor:pointer; color:#C8AF8B;" onclick="openNav()">&#9776;</span>
     
     <!-- BACK TO TOP -->
-    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <button onclick="topFunction()" id="myBtn" title="Go to top" style="border-left:none; border-bottom: none;"></button>
 
     
     <!-- Slideshow -->
@@ -550,7 +552,7 @@ section h1 {
 <div id="scroll-down">
         <section id="section04" class="demo">
             <h1></h1>
-            <a href="#work"><span></span><span></span><span></span>Explore</a>
+            <a href="#work"><span></span><span></span><span></span></a>
         </section>
       </div>
 </div>
@@ -562,16 +564,16 @@ section h1 {
     <!-- Photo Grid -->
     <div id="work"class="row"> 
         <div class="column">
-            <div class="project"><a href="project1.html"><img src="Images/theReel.gif" style="width:100%"><div class="overlay"><div class="text">Project 1</div></div></a></div>
-            <div class="project"><a href="#"><img src="Images/alexandru-acea-1063614-unsplash.jpg" style="width:100%"><div class="overlay"><div class="text">Project 3</div></div></a></div>
-            <div class="project"><a href="#"><img src="Images/anders-nord-1062702-unsplash.jpg" style="width:100%"><div class="overlay"><div class="text">Project 5</div></div></a></div>
+            <div class="project"><a href="project1.html"><img src="Images/theReel.gif" style="width:100%"><div class="overlay"><div class="text">The Reel <br/> <span style="color:#CCCCCC; font-size:14px;"> Connecting the World of Sports</span></div></div></a></div>
+            <div class="project"><a href="project3.html"\><img src="Projects/Companion/Companion_Cover.gif" style="width:100%"><div class="overlay"><div class="text">Companion App<br/><span style="color:#CCCCCC; font-size:14px;">Facilitating Engaged Attendence</span></div></div></a></div>
+            <div class="project"><a href="project5.html"><img src="Images/anders-nord-1062702-unsplash.jpg" style="width:100%"><div class="overlay"><div class="text">Project 5</div></div></a></div>
             
             
         </div>
         <div class="column">
-            <div class="project"><a href="#"><img src="Images/jeff-kepler-1062074-unsplash.jpg" style="width:100%"><div class="overlay"><div class="text">Project 2</div></div></a></div>
-            <div class="project"><a href="#"><img src="Images/john-moeses-bauan-1062799-unsplash.jpg" style="width:100%"><div class="overlay"><div class="text">Project 4</div></div></a></div>
-            <div class="project"><a href="#"><img src="Images/justin-owens-1059983-unsplash.jpg" style="width:100%"><div class="overlay"><div class="text">Project 6</div></div></a></div>
+            <div class="project"><a href="project2.html"><img src="Projects/QualityStar/QualityStar_Cover.gif" style="width:100%"><div class="overlay"><div class="text">QualityStar<br/><span style="color:#CCCCCC; font-size:14px;">Improving Quality Care</span></div></div></a></div>
+            <div class="project"><a href="project4.html"><img src="Projects/Theraplay/Theraplay_Cover.gif" style="width:100%"><div class="overlay"><div class="text">Project 4</div></div></a></div>
+            <div class="project"><a href="project6.html"><img src="Projects/ape/Ape.gif" style="width:100%"><div class="overlay"><div class="text">Apenotiq<br/><span style="color:#CCCCCC; font-size:14px;">Branding Exploration</span></div></div></a></div>
         </div>
     </div>
     
