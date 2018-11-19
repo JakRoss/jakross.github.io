@@ -73,7 +73,7 @@ body {
 }
     
 .sidenav a:hover {
-    color: #760023;
+    opacity: 0.5;
     transition: .25s ease;
 }
 
@@ -94,6 +94,8 @@ body {
   z-index: 99;
   font-size: 18px;
   border:1px solid #9ac2a7;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
   outline: none;
   background-color: transparent;
   color: #9ac2a7;
@@ -102,7 +104,7 @@ body {
   border-radius: 5px;
 }
 #myBtn:hover {
-  background-color: #760023;
+  opacity: 0.5;;
 }
     
 /*-- Slidedhow --*/
@@ -350,7 +352,7 @@ body {
     <span style="font-size:30px;cursor:pointer; color:#9ac2a7;" onclick="openNav()">&#9776;</span>
     
     <!-- BACK TO TOP -->
-    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <button onclick="topFunction()" id="myBtn" title="Go to top" style="border-left:none; border-bottom: none;"></button>
 
     
     <!-- Slideshow -->

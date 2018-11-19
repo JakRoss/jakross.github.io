@@ -73,7 +73,7 @@ body {
 }
     
 .sidenav a:hover {
-    color: #760023;
+    opacity:0.5;
     transition: .25s ease;
 }
 
@@ -95,14 +95,16 @@ body {
   font-size: 18px;
   border:1px solid #0c0d0d;
   outline: none;
-  background-color: #f3f3f3;
+    -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  background-color: transparent;
   color: #0c0d0d;
   cursor: pointer;
   padding: 15px;
   border-radius: 5px;
 }
 #myBtn:hover {
-  background-color: #760023;
+opacity: 0.5;
 }
     
 /*-- Slidedhow --*/
@@ -350,7 +352,7 @@ body {
     <span style="font-size:30px;cursor:pointer; color:#0c0d0d;" onclick="openNav()">&#9776;</span>
     
     <!-- BACK TO TOP -->
-    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <button onclick="topFunction()" id="myBtn" title="Go to top" style="border-left:none; border-bottom: none;"></button>
 
     
     <!-- Slideshow -->
@@ -389,7 +391,7 @@ body {
                   <h1 style="font-size:24px; color:#1e77bc;"> Solutions</h1>
                        
                     <span style="font-size: 21px;  font-family:'Neuton', serif; font-weight:lighter; text-align: center; line-height:35px;">                        
-                        A feed that flows smoothly into videos. Swiping left or right slide the current clip away and reveal the clip underneath. The goal for this interaction is to get the user to endlessly  swipe for content.</span><br/>
+                        Our solutions developed allow the user to quickly scan information and track their progress. The dashboard UI allows for easy access </span><br/>
                   <figure style=" position:relative; margin:0 auto;; width:100%;"><img src="Projects/QualityStar/QualityStar-HomePage.png" width="95%;" height="auto" style=" padding:5px;">  </figure>
                             
                             <span style="font-size: 21px;  font-family:'Neuton', serif; font-weight:lighter; line-height:35px;">    
