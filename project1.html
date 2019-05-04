@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>The Reel</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="Images/1x/Favicon.png" type="image/x-icon"> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Nunito:300,700" rel="stylesheet">
+<style>
+    
+    /*-- Page --  */ 
+    
+    /* make keyframes that tell the start state and the end state of our object */
+
+@-webkit-keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
+
+.fade-in, body {
+    
+    opacity:0;  /* make things invisible upon start */
+    -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+
+    -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+
+    -webkit-animation-duration:1s;
+    -moz-animation-duration:1s;
+    animation-duration:1s;
+    }
+
+.fade-in.one, body {
+    -webkit-animation-delay: 0.25s;
+    -moz-animation-delay: 0.25s;
+    animation-delay: 0.25s;
+}
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Cinzel', serif;
+}
+
+body {
+    background-color: #000000;
+   
+}
+
+/* Navigation */
+.sidenav {
+    height: 50%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid #C8AF8B;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    border-radius: 5px;
+}
+    
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    font-size: 25px;
+    text-decoration:none;
+    color: red;
+    display: block;
+}
+    
+.sidenav a:hover {
+    opacity: 0.5;
+    transition: .25s ease;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    left: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* -- BACK TO TOP -- */
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border:1px solid red;
+  outline: none;
+    -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  background-color: transparent;
+  color: #C8AF8B;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 5px;
+}
+#myBtn:hover {
+  opacity:0.5;
+}
+    
+/*-- Slidedhow --*/
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #CCCCCC;
+  font-weight:100;
+}
+
+ /*-- Photo Grid --*/   
+.row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+  
+    background-color: #CCCCCC;
+}
+
+.column {
+    -ms-flex: 50%; /* IE10 */
+    flex: 50%;
+    max-width: 50%;
+    padding: 0 4px;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+}
+    
+/*-- About Me --*/
+#about{
+    width: 100%;
+    height: auto; 
+    }
+    
+#about>p{
+    margin: auto;
+    width: 75%;
+    max-width: 650px;
+    text-align: left;
+    line-height: 36px;
+    padding: 50px 0;
+    font-size: 21px;
+    }
+    
+    /* -- Work -- */
+    .project {
+        position: relative;
+        width:100%;
+    }
+    .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 99%;
+        width: 100%;
+        opacity: 0;
+        transition: .5s ease;
+        background-color: #760023;
+        margin-top: 8px;
+    }
+
+    .project:hover .overlay{
+        opacity: 1;
+    }
+    
+    .text {
+        color: white;
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        white-space: nowrap;
+    }
+    
+    
+    #about>img{
+        margin: auto;
+    }
+    
+
+#footer {
+
+   width: 100%;
+   height: 250PX;
+   color: red;
+   text-align: right;
+   margin-top: 50px;
+    clear: both;
+
+}
+    
+#footer-content {
+    margin: auto;
+    padding: 15px;    
+    }
+
+#footer-text{
+    text-align:left; 
+    float:left; 
+    clear:left; 
+    max-width:720px; 
+    width:100%;
+    font-size:14px;
+    }
+    
+        #footer-text>a{
+        text-decoration: none;
+        color:red;
+        padding-right: 25px;
+        transition: .5s;
+    }
+    
+    #footer-text>a:hover{
+        color: #760023;
+    }
+    
+    #footer-contact{
+    text-align: left;  
+    float:left; 
+    clear:left; 
+    max-width:250px; 
+    font-size:14px;
+    }
+
+    /*-- Project Page --*/
+    
+    #media {
+        width: 75%;
+        height: auto;
+        margin: 0 auto;
+        padding: 10px; 
+
+        color:#cccccc;
+        
+
+    }
+
+    #media>p {
+        font-size: 24px;
+        width: 75%;
+        line-height: 35px;
+        
+    }
+    #media>h1 {
+        width: 45%;
+        font-size: 36px;
+    }
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+    nav, article {
+        width: 100%;
+        height: auto;
+    }
+    
+    .sidenav {padding-top: 15px;}
+    
+    .sidenav a {font-size: 18px;}
+    
+    .column {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+    }
+    #footer{
+        height: 350px;
+    }
+    
+    #footer-text{
+        max-width: 250px;
+    }
+    #footer-contact{
+        max-width: 250px;
+        float:left;
+        clear:left;
+    }
+    
+    #media {
+        width:100%;
+        margin: 0 auto;
+        margin-top: 25%;
+        align-content: center;
+        
+
+    }
+
+    #media>p {
+        font-size: 24px;
+        font-weight: bold;
+        text-align: left;
+        width: 100%;
+        margin:0 auto;
+        
+    }
+    #media>h1 {
+        width: 100%;
+        font-size: 28px;
+        font-weight: lighter;
+        text-align: left;
+        margin:0 auto;
+        padding-bottom: 25px;
+        line-height: 36px;
+        
+    }
+    #media>figure {
+        margin: 0 auto;
+    }
+}
+    
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+</style>
+</head>
+<body class="fade-in one">
+    
+    <!-- Navigation -->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html#work">Work</a>
+        <a href="index.html#about">About</a>
+        <a href="Resume.html">Resumé</a>
+        <a href="#footer">Contact</a>
+    </div>
+    <span style="font-size:30px;cursor:pointer; color:red;" onclick="openNav()">&#9776;</span>
+    
+    <!-- BACK TO TOP -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top" style="border-left:none; border-bottom: none;"></button>
+
+    
+    <!-- Slideshow -->
+    <div class="slideshow-container">
+
+<div class="mySlide">
+  <img src="Images/Asset8@3x.png" style="width:100%;">
+  <h1 class="text" style="font-size:50px"></h1>
+</div>
+</div>
+<br>
+    
+    <div id="project-content">
+       <div id="media">
+                    
+                        
+                        <p style="width:95%; text-align:left; clear:both; padding-top:30px;"><strong style="font-size:21px; color:red;">Story</strong><br/><br/>  <span style="font-size: 21px; font-family:'Neuton', serif; font-weight:lighter;"> Everyday, people are scrolling their internet feeds for the latest highlights of their favorite players and teams. With over 100 different sports around the world, its hard to stay up-to-date wth all of them at once. If a fan wants to see certain players or teams, they have to search tons of sites for the right sources. After they find the source, they still have to make sure it's the content they want. <br/><br/> 
+                            
+                        The Reel is an exclusive highlight resource every fans desires. Fans will have the ability to view all their favorite sports, teams, players,and leagues. Fans can follow their reels, create a list of favorites and even share those reels with friends on other social media plateforms. <br/><br/>
+                            
+                        Every fan deserves a chance to root for their team. With the Reel, those chances are endless.</span></p><br/> <br/>
+
+                        <p style="width:100%; text-align:left; clear:both; padding-top:30px;"><strong style="font-size:21px; color:red;">User</strong><br/><br/>  <span style="font-size: 21px; font-family:'Neuton', serif; font-weight:lighter;">Our target user demographics are males, aged 15-35. As a sports entertainment application, our user persona is focused on the avid sports fan that must stay up to date with all their favorite teams. 
+                            </span></p><br/>
+           
+                        <p style="width:100%; text-align:left; clear:both; padding-top:30px;"><strong style="font-size:21px; color:red;">Challenges</strong><br/><br/>  <span style="font-size: 21px; font-family:'Neuton', serif; font-weight:lighter;">- Providing a service that allows users to view a variety of sports. <br/>
+                            - Allowing users to personalize their feeds. <br/>
+                            - Staying up-to-date with teams and players. <br/>
+                            - Developing a filter system for easier searches.<br/>
+                            </span></p><br/>
+
+                            <p style="width:100%; text-align:left; clear:both; padding-top:30px;"><strong style="font-size:21px; color:red;">My Role</strong><br/><br/>  <span style="font-size: 21px; font-family:'Neuton', serif; font-weight:lighter;"> - User Interface Design. <br/>
+                                - User Experience Design. <br/>
+                                - Branding and Logo Design <br/>
+                                - Prototyping<br/>
+                                </span></p><br/>
+        </div>              
+        
+       
+                        
+                        <img src="Images/Asset10@3x.png" width="100%;" height="auto" style=" padding-bottom:15px;">
+        
+            
+              <div id="media">    
+                  <h1 style="font-size:24px; color:red;"> Solutions</h1>
+                        
+                         
+                        <img src="Images/Reel-03.png" width="40%" height="auto" style="float:left; clear:left; padding-top:250px; padding-bottom:25px;"><br/><br/><br/><br/><br/><br/>
+                        
+                        <p style="width:50%; text-align:left; clear:right; float:right; padding-top:250px; "><strong style="font-size:28px;">Getting Set Up</strong><br/> <span style="font-size: 21px; opacity: 0.5; font-family:'Neuton', serif; font-weight:lighter;">A quick an easy setup page to get the user moving quickly to revieving content. Just enter name, email and create a password to get started.</span></p><br/><br/><br/><br/><br/>
+                        
+                        
+                        
+                        <p style=" width:50%; float:left; clear:left; padding-top: 150px;"><strong style="font-size:28px; ">User Preferences</strong><br/> <span style="font-size: 21px; opacity: 0.5; font-family:'Neuton', serif; font-weight:lighter;">The Reel gives the user the ability to select their favorite sports, creating a profile feed of what they like. After the user is finished, they will be taken to their new Reel feed to prouse through hundreds of sports clips.</span></p>
+                        
+                       
+                        
+                        <img src="Images/Favs@3x.png" width="40%" height="auto" style=" float:right; clear:right; padding-top:25px; padding-bottom:25px;">
+                        
+                      
+                        
+
+                        
+                        <p style="width:50%; text-align:left; clear:right; float:right; padding-top:250px;"><strong style="font-size:28px;">Quick Swipe</strong><br/> <span style="font-size: 21px; opacity: 0.5; font-family:'Neuton', serif; font-weight:lighter;">The UI for the home page is based off the simple interaction of a swipe, a quick gesture that create quick, effective, and effecient user experience. The idea is to allow the user to get lost in the action of just swiping to view content.</span></p><br/>
+                        
+                        <img src="Images/FeedPage@3x.png" width="40%" height="auto" style="float:left; clear:left; padding-top:15px;">
+                        
+                        
+                        <p style="width:50%; text-align:left; clear:left; float:left; padding-top:250px;"><strong style="font-size:28px;">Video Page</strong><br/> <span style="font-size: 21px; opacity: 0.5; font-family:'Neuton', serif; font-weight:lighter;">The video page features the desired clip that the user has selected to veiw. This page features a timeline for the video duration. the video, is displayed in a verticle view to create unity throughout the application design.  </span></p><br/>
+                        
+                        <img src="Images/VidClip@3x.png" width="40%" height="auto" style="float:right; clear:right; padding-top:15px; padding-bottom:25px;">
+                        
+                        
+                        <p style="width:50%; text-align:left; clear:right; float:right; padding-top:250px;"><strong style="font-size:28px;">Sharing Clips</strong><br/> <span style="font-size: 21px; opacity: 0.5; font-family:'Neuton', serif; font-weight:lighter;">With just a few interactions the user has the ability to share any clips to their other social media accounts, allowing the user to share their favorite clips with friends on other plateforms. </span></p><br/>
+                        
+                        <img src="Images/Share@3x.png" width="40%" height="auto" style="float:left; clear:left; padding-top:15px; padding-bottom:25px;">
+                        
+                        <p style="width:50%; text-align:left; clear:left; float:left; padding-top:250px;"><strong style="font-size:28px;">User's Clips</strong><br/> <span style="font-size: 21px; opacity: 0.5; font-family:'Neuton', serif; font-weight:lighter;">With the use of the "Clips" feature of the application, the user has the ability to save their favorite clips into a personal vault for them to share and watch later. This feature add to the personalization of the application, creating better interactivity and engagment within the app.</span></p><br/>
+                        
+                        <img src="Images/Savedclips@3x.png" width="40%" height="auto" style="float:right; clear:right; padding-top:15px; padding-bottom:25px;">
+						
+						<p style="width:50%; text-align:left; clear:right; float:right; padding-top:250px;"><strong style="font-size:28px;">Search Clips</strong><br/> <span style="font-size: 21px; opacity: 0.5; font-family:'Neuton', serif; font-weight:lighter;">The search feature of this application is just a click away for the user to browse through hundreds of sports. This feature also includes recommended clips based off the user's preferences.  </span></p><br/>
+                        
+                        <img src="Images/Search@3x.png" width="40%" height="auto" style="float:left; clear:left; padding-top:15px; padding-bottom:25px;">
+
+                        </div>
+        <div id="media">
+                        
+                        
+                        <p style="width:95%; text-align:left; clear:both; padding-top:40px;"><strong style="font-size:24px; color:red;"> Goals</strong><br/><br/>  <span style="font-size: 21px; font-family:'Neuton', serif; font-weight:lighter;"> The Reel provides it's users with an endless stream of personalized content. Our goal is to create an application the allows users to stay up-to-date with all their favorite teams, share content and be the biggest fan. The functionality of the application allows for easy navigation, cross-plateform sharing, and an engaging UI that users will enjoy everytime they open the app.  </span></p><br/>                     
+        </div>
+        <img src="Images/Asset12@3x.png" width="100%;" height="auto" style=" padding-bottom:15px;">
+         <video  width="50%;" height="auto" style=" padding-bottom:15px; position:relative; left:25%" poster="Images/Asset7@3x.png" controls autoplay >
+            <source src = "Images/IG-favfeed.mp4" type = "video/mp4" >
+            </video>
+        
+        
+        <p style="font-size:18px;"><a href="project6.html" style="color:red; float:left; clear:left; text-decoration:none;">Previous Project</a>     
+                <a href="project8.html" style="color:red; float:right; text-decoration:none;">Next Project</a></p>
+    
+    </div>
+
+    
+    <div id="footer">
+        <div id="footer-content">
+            
+             <p id="footer-text">
+                <a href="index.html#work">Work</a> 
+                <a href="index.hyml#about">About</a> 
+                <a href="Resume.html">Resumé </a> 
+                <a href="#footer">Contact </a>
+            </p>
+            
+            <p id="footer-text">Looking for a passionate designer,  who's up for any challenge? Do not hesitate to reach out to me, I'm always ready to extend a helping hand. </p>
+            
+            <p id="footer-contact">
+                jakross00@yahoo.com <br/><br/>
+                <a href="https://www.instagram.com/jakross_/" style="color:red;"><i class="fa fa-instagram" style="font-size:18px;"></i></a>
+                <a href="https://www.pinterest.com/JayRoss11/" style="color:red;"><i class="fa fa-pinterest" style="font-size:18px; padding:10px;"></i></a>
+                <a href="https://dribbble.com/jakross_" style="color:red;"><i class="fa fa-dribbble" style="font-size:18px; padding:10px;"></i></a>
+                <a href="https://www.linkedin.com/in/jaymee-rosser-034b8711b/" style="color:red;"><i class="fa fa-linkedin" style="font-size:18px; padding:10px;"></i></a>
+        
+            </p>
+        </div>
+    </div>
+
+    
+<script  >
+    
+// navigation    
+    function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+// BACK TO TOP
+    
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+
+</script>
+
+
+</body>
+</html>
+
+<!--
+
+   Comments
+
+~ Colors ~
+Red: 760023
+Dark Grey: 252525
+White: CCCCCC
+Cool Grey: 333D43
+Tan: C8AF8B
+~~~~~~~~~~~~~~~~~
+
+-->

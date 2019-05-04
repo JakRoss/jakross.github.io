@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Jak Ross</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="Images/1x/Favicon.png" type="image/x-icon"> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Cinzel|Quattrocento+Sans" rel="stylesheet">
+<style>
+    
+    /*-- Page --  */ 
+    
+    /* make keyframes that tell the start state and the end state of our object */
+
+@-webkit-keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
+    
+@-webkit-keyframes body { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
+@-moz-keyframes body { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
+@keyframes body { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
+
+.fade-in, body {
+    
+    opacity:0;  /* make things invisible upon start */
+    -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+
+    -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+
+    -webkit-animation-duration:1s;
+    -moz-animation-duration:1s;
+    animation-duration:1s;
+    }
+
+.fade-in.one, body{
+    -webkit-animation-delay: 0.25s;
+    -moz-animation-delay: 0.25s;
+    animation-delay: 0.25s;
+}
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Cinzel', serif;
+}
+    
+
+
+body {
+    background-color: #000000;
+    Background-image: url("Images/1x/Asset%2017.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: contain;
+    -webkit-background-color: #000000;
+    -webkit-Background-image: url("Images/1x/Asset%2017.png");
+    -webkit-background-repeat: no-repeat;
+    -webkit-background-attachment: fixed;
+    -webkit-background-size: contain;
+    -moz-background-color: #000000;
+    -moz-Background-image: url("Images/1x/Asset%2017.png");
+    -moz-background-repeat: no-repeat;
+    -moz-background-attachment: fixed;
+    -moz-background-size: contain;
+}
+
+/* Navigation */
+.sidenav {
+    height: 50%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid #C8AF8B;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    border-radius: 5px;
+
+}
+    
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    font-size: 25px;
+    text-decoration:none;
+    color: #C8AF8B;
+    display: block;
+    
+}
+    
+.sidenav a:hover {
+    opacity: 0.5;
+    
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    left: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* -- BACK TO TOP -- */
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border-right: 1px solid #C8AF8B;
+  border-top: 1px solid #C8AF8B;
+  outline: none;
+  background-color:transparent;
+  color: #C8AF8B;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 5px;
+    -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+#myBtn:hover {
+  opacity: 0.5;
+}
+
+    
+/*-- Slidedhow --*/
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+  
+}
+    
+.mySlide {
+    width:100%; 
+    height:960px;
+}
+
+.mySlide>h1 {
+    color: #CCCCCC;
+    position: absolute;
+    left:37.5%;
+    top: 25%;
+    margin: 0 auto;
+    font-weight: 100;
+    text-align: center;
+
+}
+    
+#scroll-down{
+    bottom:15%;
+    position: absolute;
+    }
+    
+section {
+  bottom: 0;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+section::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 80%;
+}
+section h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: #fff;
+
+  text-align: center;
+  white-space: nowrap;
+}
+
+    
+#section04 a {
+  padding-top: 60px;
+}
+#section04 a span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  border-left: 1px solid #C8AF8B;
+  border-bottom: 1px solid #C8AF8B;
+  border-radius: 5px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-animation: sdb04 2s infinite;
+  animation: sdb04 2s infinite;
+  box-sizing: border-box;
+}
+@-webkit-keyframes sdb04 {
+  0% {
+    -webkit-transform: rotate(-45deg) translate(0, 0);
+  }
+  20% {
+    -webkit-transform: rotate(-45deg) translate(-10px, 10px);
+  }
+  40% {
+    -webkit-transform: rotate(-45deg) translate(0, 0);
+  }
+}
+@keyframes sdb04 {
+  0% {
+    transform: rotate(-45deg) translate(0, 0);
+  }
+  20% {
+    transform: rotate(-45deg) translate(-10px, 10px);
+  }
+  40% {
+    transform: rotate(-45deg) translate(0, 0);
+  }
+}
+    
+    .demo a {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  z-index: 2;
+  display: inline-block;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  color: #C8AF8B;
+  font : normal 400 20px/1 'Cinzel', serif;
+  letter-spacing: .1em;
+  text-decoration: none;
+  transition: opacity .3s;
+}
+.demo a:hover {
+  opacity: .5;
+}
+
+
+
+/* Caption text */
+.text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #CCCCCC;
+  font-weight:100;
+}
+
+ /*-- Photo Grid --*/   
+.row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+}
+
+.column {
+    -ms-flex: 50%; /* IE10 */
+    flex: 50%;
+    max-width: 50%;
+    padding: 0 4px;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+}
+    
+/*-- About Me --*/
+#about{
+    width: 100%;
+    height: auto;
+    color: #C8AF8B;
+    border-radius: 10px;
+    }
+    
+#about>p{
+    margin: auto;
+    width: 75%;
+    max-width: 650px;
+    text-align: left;
+    line-height: 36px;
+    padding: 50px 0;
+    font-size: 18px;
+
+    }
+    
+    /* -- Work -- */
+    .project {
+        position: relative;
+        width:100%;
+    }
+    .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: auto;
+        width: 100%;
+        opacity: 0;
+        transition: .5s ease;
+        border:1px solid #C8AF8B;
+        background-color: #000000;
+        border-radius: 5px;
+        margin-top: 8px;
+        color: #C8AF8B;
+    }
+
+    .project:hover .overlay{
+        opacity: 1;
+    }
+    
+    .text {
+        color: #C8AF8B;
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        white-space: nowrap;
+    }
+    
+    
+    #about>img{
+        margin: auto;
+    }
+    
+
+#footer {
+
+   width: 100%;
+   height: 250PX;
+   color: #C8AF8B;
+   text-align: right;
+   margin-top: 50px;
+    clear: both;
+
+}
+    
+#footer-content {
+    margin: auto;
+    padding: 15px;    
+    }
+
+#footer-text{
+    text-align:left; 
+    float:left; 
+    clear:left; 
+    max-width:720px; 
+    width:100%;
+    font-size:14px;
+    }
+    
+    #footer-text>a{
+        text-decoration: none;
+        color: #C8AF8B;
+        padding-right: 25px;
+        transition: .5s;
+    }
+    
+    #footer-text>a:hover{
+        color: #760023;
+    }
+    
+#footer-contact{
+    text-align: left;  
+    float:left; 
+    clear:left; 
+    max-width:250px; 
+    font-size:14px;
+    }
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+    
+     @media (max-height: 1380px) {
+        
+    .mySlide{
+         height: 1440px;
+       
+        }
+        
+    #scroll-down{
+        bottom:15%;
+         left: 50%;
+        }
+        
+        body{
+            background-position: center;
+        }
+}
+    
+    
+    
+    @media (max-height: 1080px) {
+        
+    .mySlide{
+         height: 1080px;
+       
+        }
+        
+    #scroll-down{
+        bottom:25%;
+         left: 50%;
+        }
+        
+        body{
+            background-position: center;
+        }
+    }
+    
+    @media (max-height: 850px) {
+        
+    .mySlide{
+         height: 960px;
+       
+        }
+        
+    #scroll-down{
+        bottom:25%;
+         left: 50%;
+        }
+
+        .mySlide>h1 {
+            left:5%;
+            top: 10%;
+            font-size: 21px;
+    }
+    }
+    
+    @media (max-height: 750px) {
+        
+    .mySlide{
+         height: 960px;
+       
+        }
+        
+    #scroll-down{
+        bottom:30%;
+         left: 50%;
+        }
+    }
+    
+    @media (max-height: 650px) {
+        
+    .mySlide{
+         height: 960px;
+       
+        }
+        
+    #scroll-down{
+        bottom:45%;
+         left: 35.5%;
+        }
+    }
+    
+    
+    
+    @media (max-width: 800px) {
+        
+    body{
+         background-size: center;
+        }
+
+        .mySlide>h1 {
+            left:45.5%;
+            top: 10%;
+            font-size: 21px;
+    }
+@media (max-width: 600px) {
+    nav, article {
+        width: 100%;
+        height: auto;
+    }
+    
+    .sidenav {padding-top: 15px;}
+    
+    .sidenav a {font-size: 18px;}
+    
+    .mySlide>h1 {
+            left:45.5%;
+            top: 25%;
+            font-size: 21px;
+    }
+
+    .column {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+    }
+    
+    #about>p {
+        font-size:14px;
+    }
+    #footer{
+        height: 350px;
+    }
+    
+    
+    #footer-text{
+        max-width: 250px;
+        font-size: 12px;
+    }
+
+    
+    #footer-contact{
+        max-width: 250px;
+        float:left;
+        clear:left;
+        font-size: 12px;
+    }
+}
+    
+@media only screen and (max-width: 480px) {
+    
+    body{
+        background-position: center;
+    }
+  .text {font-size: 11px}
+    
+    
+    #about>p{
+        font-size:12px;
+    }
+    
+    #footer-text{
+        font-size:12px;
+    }
+    
+    #footer-contact{
+        font-size:12px;
+    }
+
+    .mySlide>h1 {
+            left:15%;
+            top: 10%;
+            font-size: 21px;
+ }
+
+ #scroll-down{
+        bottom:35%;
+         left: 50%;
+        }
+}
+
+    }
+    
+    
+
+</style>
+</head>
+<body class="fade-in one">
+    
+    <!-- Navigation -->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="Resume.html">Resumé</a>
+        <a href="#footer">Contact</a>
+        
+    </div>
+    <span style="font-size:30px;cursor:pointer; color:#C8AF8B;" onclick="openNav()">&#9776;</span>
+    
+    <!-- BACK TO TOP -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top" style="border-left:none; border-bottom: none;"></button>
+
+    
+    <!-- Slideshow -->
+    <div class="slideshow-container">
+      
+<div class="mySlide">
+   
+</div>
+<div id="scroll-down">
+        <section id="section04" class="demo">
+            <p></p>
+            <a href="#work"><span></span><span></span><span></span></a>
+        </section>
+    </div>
+</div>
+    
+    
+<br>
+
+
+    <!-- Photo Grid -->
+    <div id="work"class="row"> 
+        <div class="column">
+            <div class="project"><a href="project1.html"\><img src="Images/theReel.gif" style="width:100%"><div class="overlay"><div class="text">The Reel <br/><span style="color:#CCCCCC; font-size:14px;">Connecting the World of Sports</span></div></div></a></div>
+            <div class="project"><a href="project7.html"><img src="Projects/enr-g/ENRG_cover.gif" style="width:100%"><div class="overlay"><div class="text">ENR-G <br/> <span style="color:#CCCCCC; font-size:14px;"> Feel the Energy</span></div></div></a></div>
+           
+            <div class="project"><a href="project3.html"><img src="Projects/Companion/Companion_Cover.gif" style="width:100%"><div class="overlay"><div class="text">Companion App<br/><span style="color:#CCCCCC; font-size:14px;">Facilitating Engaged Attendence</span></div></div></a></div>
+
+            <div class="project"><a href="project2.html"><img src="Projects/QualityStar/QualityStar_Cover.gif" style="width:100%"><div class="overlay"><div class="text">Quality Star<br/><span style="color:#CCCCCC; font-size:14px;">Improving Star Ratings</span></div></div></a></div>
+            
+        </div>
+        <div class="column">
+            <div class="project"><a href="project8.html"\><img src="Projects/myCourses/Cover-01.png" style="width:100%"><div class="overlay"><div class="text">RIT myCourses <br/><span style="color:#CCCCCC; font-size:14px;">Rethinking Interaction</span></div></div></a></div>
+
+            <div class="project"><a href="project5.html"><img src="Projects/liquiddd/DayZero.gif" style="width:100%"><div class="overlay"><div class="text">WIP: Day Zero<br/><span style="color:#CCCCCC; font-size:14px;">  Visualize Water Scarcity </span></div></div></a></div>
+            
+           
+            <div class="project"><a href="project4.html"><img src="Projects/Theraplay/Theraplay_Cover.gif" style="width:100%"><div class="overlay"><div class="text">TheraPlay<br/><span style="color:#CCCCCC; font-size:14px;">Inspire Recovery</span></div></div></a></div>
+
+            <div class="project"><a href="project6.html"><img src="Projects/ape/Ape.gif" style="width:100%"><div class="overlay"><div class="text">Apenotiq<br/><span style="color:#CCCCCC; font-size:14px;">Branding Exploration</span></div></div></a></div>
+        </div>
+    </div>
+    
+    <div id="about" style="background-color:#000000; border-bottom:1px solid #C8AF8B; border-radius:10px; ">
+        <p><img src="Images/thatsMe-01.png" style="width:100%; height:auto; margin:auto; padding: 50px 0; align-content:center;"><br/>
+        Hey,  my name is  Jaymee, or Jak Ross. <br/><br/>
+        I am a designer who loves to explore creativity and functionality. I also like to explore new ways technology can enhance our experiences.  <br/><br/>
+
+        I spend my free time reading books, playing videos games, and spending time with family.  <br/><br/>
+        
+        I love working with people to better our community.  <br/><br/>
+
+        Let's create something great.
+
+
+
+        
+        </p>
+    </div>
+    
+    <div id="footer">
+        <div id="footer-content">
+            
+            <p id="footer-text">
+                <a href="#work">Work</a> 
+                <a href="#about">About</a> 
+                <a href="Resume.html">Resumé </a> 
+                <a href="#footer">Contact </a>
+            </p>
+            
+            <p id="footer-text">Looking for a passionate designer,  who's up for any challenge? Do not hesitate to reach out to me, I'm always ready to extend a helping hand. </p>
+            
+            <p id="footer-contact">
+                jakross00@yahoo.com <br/><br/>
+                <a href="https://www.instagram.com/jakross_/" style="color:#C8AF8B;"><i class="fa fa-instagram" style="font-size:18px;"></i></a>
+                <a href="https://www.pinterest.com/JayRoss11/" style="color:#C8AF8B;"><i class="fa fa-pinterest" style="font-size:18px; padding:10px;"></i></a>
+                <a href="https://dribbble.com/jakross_" style="color:#c8af8b;"><i class="fa fa-dribbble" style="font-size:18px; padding:10px;"></i></a>
+                <a href="https://www.linkedin.com/in/jaymee-rosser-034b8711b/" style="color:#c8af8b;"><i class="fa fa-linkedin" style="font-size:18px; padding:10px;"></i></a>
+        
+            </p>
+        </div>
+    </div>
+
+    
+<script  >
+    
+// navigation    
+    function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+// BACK TO TOP
+    
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+
+    
+// scroll down -- 
+    
+    $(function() {
+  $('a[href*=#]').on('click', function(e) {
+    e.preventDefault();
+    $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
+  });
+});
+</script>
+
+
+</body>
+</html>
+
+<!--
+
+   Comments
+
+~ Colors ~
+Red: 760023
+Dark Grey: 252525
+White: CCCCCC
+Cool Grey: 333D43
+Tan: C8AF8B
+~~~~~~~~~~~~~~~~~
+
+-->
