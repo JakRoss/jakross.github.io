@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>ConnectShare</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="Images/Favicon.png" type="image/x-icon"> 
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<style>
+
+.main{
+    display:flex;
+    flex: 85%;
+    background-color:transparent;
+    padding: 20px;
+    justify-content: center;
+    align-items: center; 
+    height: 100vh;
+    flex-direction: column;
+    
+    
+    
+}
+
+.projectBox{
+    position: inherit;
+    width: 75%; 
+    height:85%;
+    margin:50px;
+    overflow-y: scroll;
+
+   
+}
+
+
+.projectBox>.media>p{
+    color:darkgrey;
+    line-height: 24px;
+
+}
+
+.media{
+    display: flex;
+    flex:100%;
+    width: 100%;
+    padding:20px;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.media2{
+    display: flex;
+    flex:100%;
+    width: 100%;
+    padding:20px;
+    align-content: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.projectBox>.media2>p{
+    color:darkgrey;
+    line-height: 24px;
+}
+
+.media>img{
+    position: relative;
+    margin:0 auto;
+}
+
+.media>video{
+    position: relative;
+    margin:0 auto;
+}
+
+
+
+
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #fff; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: lightgray; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    transition: ease-in-out;
+    transition-duration: 0.5s;
+    background: teal; 
+    opacity: 0.5;
+}
+
+    
+</style>
+
+</head>
+<!--end of the head-->
+
+<!--start of the body-->
+<body class="fade-in one">
+<div class="container">    
+    <div class="row">
+        <div class="side">
+            <div class="navBox">
+                <div id="logo" style=" width:200px; height:400px;"> <img src="Images/logo.png" width="100%"></div>
+
+
+                <div><ul>
+                    <li><a href="index.html#work">Work</a></li>
+                    <li><a href="about.html#about">About Me</a></li>
+                    <li><a href="resume.html#experience">Rèsumè</a></li>
+                 </ul></div>
+
+                 <div id="connect"style=" width:150px; height:50px; margin-top:300px;">
+                        <a href="https://www.instagram.com/jakross_/" ><i class="fa fa-instagram" style="font-size:21px;"></i></a>
+    
+                        <a href="https://www.pinterest.com/JayRoss11/" ><i class="fa fa-pinterest" style="font-size:21px;;"></i></a>
+                
+                        <a href="https://dribbble.com/jakross_"><i class="fa fa-dribbble" style="font-size:21px;"></i></a>
+    
+                        <a href="mailto:jakross00@yahoo.com" ><i class="fa fa-envelope" style="font-size:21px;;"></i></a>
+    
+                        <a href="https://www.linkedin.com/in/jaymee-rosser-034b8711b/"><i class="fa fa-linkedin" style="font-size:21px;;"></i></a>
+                
+                
+                </div>
+
+
+            </div>
+
+            
+        </div>
+
+        <div class="main">
+
+        <div class="projectBox" id="project">
+
+               <div class="media"> 
+                   
+                <video width="75%" height="auto" controls >
+                    <source src="ConnectShare/ConnectShare.mp4" type="video/mp4">       
+                        Your browser does not support the video tag.
+                </video>   
+                
+            </div>   
+               
+               <div class="media">
+                    <h1 >Story</h1>
+                         <p>The users of today are distracted by thousands of application being made everyday. Why not create an app that allows users to connect their favorite social media accounts into one feed.</p>                  
+                     </div>   
+
+                     <div class="media">
+                            <h1 >User Persona</h1>
+                                 <p>Our user for this application is a young adult who's life revolves around social media.</p>                  
+                             </div>  
+
+                    <div class="media">
+                            <h1 >My Role</h1>
+                                <p>User Experience Design</p>   
+                                <p>Motion Graphics and Prototyping</p>               
+                        </div>  
+
+                    <div class="media2">
+                        <img src="ConnectShare/IgFeed.png" width="25%;" height="25%" style=" padding-bottom:15px;">
+                        <img src="ConnectShare/LandingPage.png" width="25%;" height="25%" style=" padding-bottom:15px;">
+                        <img src="ConnectShare/TwitterFeed.png" width="25%;" height="25%" style=" padding-bottom:15px;"><br/>
+                    </div>
+
+                    <div class="media">
+                            <h1>Cross Sharing</h1>
+                            <p>Simple interactions are the basis for user engagement. Rotating, press and hold, and drag and drop are simple interaction that allow the user to quickly switch from scrolling through the feed to sharing your favorite posts. </p>
+    
+                    </div>
+
+                    <div class="media"> 
+                   
+                            <video width="75%" height="auto" poster="ConnectShare/SharePage.png" controls >
+                                <source src="ConnectShare/ConnectShare_TurnShare.mp4" type="video/mp4">       
+                                    Your browser does not support the video tag.
+                            </video>   
+                            
+                        </div> 
+                        
+                        <div class="media">
+                                <h1>Engaging</h1>
+                                <p> To engage the user, interaction are limited for quick and easy use. The user has the ability to quickly switch accounts at any time, making it easier to see many different accounts in one application.  </p>
+        
+                        </div>
+
+                        <div class="media2">
+                                <video width="50%" height="50%" tyle="float:right clear:right;"controls>
+                                        <source src="ConnectShare/ConnectShare_SwitchScroll.mp4" type="video/mp4">       
+                                        Your browser does not support the video tag.
+                                    </video> 
+                                    
+                                    <video width="50%" height="50%" style="float:left; clear:left;" controls>
+                                        <source src="ConnectShare/ConnectShare_TwitterFeed.mp4" type="video/mp4">       
+                                        Your browser does not support the video tag.
+                                    </video>
+                            </div>
+
+                            <div class="media">
+                                    <h1>Final Goals</h1>
+                                    <p> With simplicity and cohesion, ConnectShare looks to bridge the gap between viewing your favorite Social Networks and sharing acrossed multiple plateforms. Less Button. Less Pages. More Productivity.  </p>
+            
+                            </div>
+                         
+   
+        </div><!--close projectBox-->
+                
+
+        <div class="move">
+                <p style="font-size:18px;"><a href="reel.html#project" style="color:teal; float:left; clear:left; text-decoration:none;"><i class="fa fa-chevron-left" style="margin-right:10px;"></i>Previous Project</a>     
+                    <a href="usa.html#project" style="color:teal; float:right; text-decoration:none;">Next Project<i class="fa fa-chevron-right" style="margin-left:10px;"></i></a></p>
+                </div>
+   
+
+            
+        </div><!--close main-->
+    </div><!--close row-->
+</div><!--close container-->
+
+</body>
+
+<!--start of the body-->
+</html>
+

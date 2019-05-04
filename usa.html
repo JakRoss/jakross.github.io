@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>usaToday++</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="Images/Favicon.png" type="image/x-icon"> 
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<style>
+
+.main{
+    display:flex;
+    flex: 85%;
+    background-color:transparent;
+    padding: 20px;
+    justify-content: center;
+    align-items: center; 
+    height: 100vh;
+    flex-direction: column;
+    
+    
+    
+}
+
+.projectBox{
+    position: inherit;
+    width: 75%; 
+    height:85%;
+    margin:50px;
+    overflow-y: scroll;
+
+   
+}
+
+
+.projectBox>.media>p{
+    color:darkgrey;
+    line-height: 24px;
+
+}
+
+.media{
+    display: flex;
+    flex:100%;
+    width: 100%;
+    padding:20px;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.media2{
+    display: flex;
+    flex:100%;
+    width: 100%;
+    padding:20px;
+    align-content: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.projectBox>.media2>p{
+    color:darkgrey;
+    line-height: 24px;
+}
+
+.media>img{
+    position: relative;
+    margin:0 auto;
+}
+
+.media>video{
+    position: relative;
+    margin:0 auto;
+}
+
+
+
+
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #fff; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: lightgray; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    transition: ease-in-out;
+    transition-duration: 0.5s;
+    background: teal; 
+    opacity: 0.5;
+}
+
+    
+</style>
+
+</head>
+<!--end of the head-->
+
+<!--start of the body-->
+<body class="fade-in one">
+<div class="container">    
+    <div class="row">
+        <div class="side">
+            <div class="navBox">
+                <div id="logo" style=" width:200px; height:400px;"> <img src="Images/logo.png" width="100%"></div>
+
+
+                <div><ul>
+                    <li><a href="index.html#work">Work</a></li>
+                    <li><a href="about.html#about">About Me</a></li>
+                    <li><a href="resume.html#experience">Rèsumè</a></li>
+                 </ul></div>
+
+                 <div id="connect"style=" width:150px; height:50px; margin-top:300px;">
+                        <a href="https://www.instagram.com/jakross_/" ><i class="fa fa-instagram" style="font-size:21px;"></i></a>
+    
+                        <a href="https://www.pinterest.com/JayRoss11/" ><i class="fa fa-pinterest" style="font-size:21px;;"></i></a>
+                
+                        <a href="https://dribbble.com/jakross_"><i class="fa fa-dribbble" style="font-size:21px;"></i></a>
+    
+                        <a href="mailto:jakross00@yahoo.com" ><i class="fa fa-envelope" style="font-size:21px;;"></i></a>
+    
+                        <a href="https://www.linkedin.com/in/jaymee-rosser-034b8711b/"><i class="fa fa-linkedin" style="font-size:21px;;"></i></a>
+                
+                
+                </div>
+
+
+            </div>
+
+            
+        </div>
+
+        <div class="main">
+
+        <div class="projectBox" id="project">
+
+               <div class="media"> 
+                   
+                    <img src="usaToday/usaToday_covers-01.png" style= "width:100%; height:auto;">
+                
+            </div>   
+               
+               <div class="media">
+                    <h1>Mission</h1>
+                         <p>Make browsing news events convenient, efficient, and smarter so that millennials will feel more comfortable and informed when using the app.</p>                  
+                     </div>   
+
+                     <div class="media">
+                            <h1 >User Persona</h1>
+                                 <p>Our users are mostly young adult who look for their news on the go. We are looking to appeal to a younger focus group due to research that suggest this demographic is more likely to use a mobile application for news.</p>                  
+                             </div>  
+
+                    <div class="media">
+                            <h1 >My Role</h1>
+                                <p>User Experience Design</p>   
+                                <p>Motion Graphics and Prototyping</p>
+                                <p><a href="usaToday/Process.pdf" style="text-decoration:none; color:teal"> View Process Deck</a></p>            
+                        </div>  
+
+                    <div class="media">
+                            <h1>Verticle Swiping Feed</h1>
+                            <p>Focus is on one article. Easily swipe through articles that they’re not interested in. Doesn’t overwhelm the user
+                             ***Ads can be easily placed in this style of feed and users can easily swipe past them </p>
+    
+                    </div>
+
+                    <div class="media"> 
+                   
+                            <video width="75%" height="auto" controls >
+                                <source src="usaToday/FeedScroll.mp4" type="video/mp4">       
+                                    Your browser does not support the video tag.
+                            </video>   
+                            
+                        </div> 
+                        
+                        <div class="media">
+                                <h1>Minimize ‘new’ screens</h1>
+                                <p>Keeps the user in the feed.</p> 
+                                <p>Common actions and pathways. </p>
+                                <p>Always at home </p>
+                                <p>Options for personalization  </p>
+        
+                        </div>
+
+                        <div class="media2">
+                                <img src="usaToday/MorePhones1-01.png" style= "width:100%; height:100%;">
+                            </div>
+
+                            <div class="media">
+                                    <h1>Custom Notifications</h1>
+                                    <p>Instantly updates user on their interests. Sleep Modes. Filter their categories.  </p>
+            
+                            </div>
+
+                            <div class="media"> 
+                   
+                                    <video width="75%" height="auto"  controls >
+                                        <source src="usaToday/Filter.mp4" type="video/mp4">       
+                                            Your browser does not support the video tag.
+                                    </video>   
+                                    
+                                </div>
+
+                                <div class="media">
+                                        <h1>Goals</h1>
+                                        <p>Our goal is to give users a reoccuring reminder of the quality information that USA TODAY offers by leveraging their phone notifactions, as well as giving them the option to explore a unique article feed that can take their curiousity and interests to the next level. </p>
+                
+                                </div>
+                         
+   
+        </div><!--close projectBox-->
+                
+
+        <div class="move">
+                <p style="font-size:18px;"><a href="connect.html#project" style="color:teal; float:left; clear:left; text-decoration:none;"><i class="fa fa-chevron-left" style="margin-right:10px;"></i>Previous Project</a>     
+                    <a href="dayzero.html#project" style="color:teal; float:right; text-decoration:none;">Next Project<i class="fa fa-chevron-right" style="margin-left:10px;"></i></a></p>
+                </div>
+   
+
+            
+        </div><!--close main-->
+    </div><!--close row-->
+</div><!--close container-->
+
+</body>
+
+<!--start of the body-->
+</html>
+
